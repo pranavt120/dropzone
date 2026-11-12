@@ -1,0 +1,653 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -----------------< com.flashsale:reservation-service >------------------
+[INFO] Building Flash Sale Reservation Service 0.1.0
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ reservation-service ---
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] 
+[INFO] --- compiler:3.13.0:compile (default-compile) @ reservation-service ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ reservation-service ---
+[INFO] Copying 1 resource from src\test\resources to target\test-classes
+[INFO] 
+[INFO] --- compiler:3.13.0:testCompile (default-testCompile) @ reservation-service ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] --- surefire:3.2.5:test (default-test) @ reservation-service ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.flashsale.ReservationConcurrencyTest
+11:33:13.567 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.flashsale.ReservationConcurrencyTest]: ReservationConcurrencyTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+11:33:13.646 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.flashsale.ReservationServiceApplication for test class com.flashsale.ReservationConcurrencyTest
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.3.0)
+
+2026-11-12T11:33:13.976+05:30  INFO 10052 --- [flash-sale-reservation-service] [           main] c.flashsale.ReservationConcurrencyTest   : Starting ReservationConcurrencyTest using Java 21.0.10 with PID 10052 (started by ssart in D:\dropzone)
+2026-11-12T11:33:13.976+05:30 DEBUG 10052 --- [flash-sale-reservation-service] [           main] c.flashsale.ReservationConcurrencyTest   : Running with Spring Boot v3.3.0, Spring v6.1.8
+2026-11-12T11:33:13.976+05:30  INFO 10052 --- [flash-sale-reservation-service] [           main] c.flashsale.ReservationConcurrencyTest   : The following 1 profile is active: "test"
+2026-11-12T11:33:15.644+05:30  WARN 10052 --- [flash-sale-reservation-service] [           main] org.hibernate.dialect.Dialect            : HHH000511: The 2.2.224 version for [org.hibernate.dialect.PostgreSQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 12.0.0. Check the community dialects project for available legacy versions.
+2026-11-12T11:33:15.649+05:30  WARN 10052 --- [flash-sale-reservation-service] [           main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-11-12T11:33:17.207+05:30  WARN 10052 --- [flash-sale-reservation-service] [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-11-12T11:33:17.613+05:30  INFO 10052 --- [flash-sale-reservation-service] [           main] c.flashsale.ReservationConcurrencyTest   : Started ReservationConcurrencyTest in 3.861 seconds (process running for 4.672)
+2026-11-12T11:33:34.938+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-10101] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:34.939+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-10101] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5004ms (total=20, active=18, idle=2, waiting=3439)
+2026-11-12T11:33:34.982+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-11283] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:34.982+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-11283] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5080ms (total=20, active=17, idle=3, waiting=3363)
+2026-11-12T11:33:34.983+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-11302] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:34.983+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-11302] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5073ms (total=20, active=18, idle=2, waiting=3357)
+2026-11-12T11:33:34.983+05:30  WARN 10052 --- [flash-sale-reservation-service] [   virtual-6205] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:34.983+05:30 ERROR 10052 --- [flash-sale-reservation-service] [   virtual-6205] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5059ms (total=20, active=19, idle=1, waiting=3356)
+2026-11-12T11:33:34.984+05:30  WARN 10052 --- [flash-sale-reservation-service] [   virtual-9989] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:34.984+05:30 ERROR 10052 --- [flash-sale-reservation-service] [   virtual-9989] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5059ms (total=20, active=19, idle=1, waiting=3355)
+2026-11-12T11:33:34.985+05:30  WARN 10052 --- [flash-sale-reservation-service] [   virtual-7982] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:34.985+05:30 ERROR 10052 --- [flash-sale-reservation-service] [   virtual-7982] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5059ms (total=20, active=19, idle=1, waiting=3355)
+2026-11-12T11:33:34.985+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-10227] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:34.985+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-10227] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5059ms (total=20, active=19, idle=1, waiting=3351)
+2026-11-12T11:33:34.987+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-10191] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:34.987+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-10191] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5060ms (total=20, active=18, idle=2, waiting=3350)
+2026-11-12T11:33:34.988+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-10253] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:34.988+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-10253] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5060ms (total=20, active=18, idle=2, waiting=3347)
+2026-11-12T11:33:34.988+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-10329] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:34.988+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-10329] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5058ms (total=20, active=17, idle=3, waiting=3345)
+2026-11-12T11:33:34.989+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-11376] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:34.989+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-11376] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5048ms (total=20, active=19, idle=1, waiting=3343)
+2026-11-12T11:33:34.990+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-10066] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:34.990+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-10066] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5046ms (total=20, active=19, idle=1, waiting=3342)
+2026-11-12T11:33:34.990+05:30  WARN 10052 --- [flash-sale-reservation-service] [   virtual-8264] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:34.990+05:30 ERROR 10052 --- [flash-sale-reservation-service] [   virtual-8264] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5045ms (total=20, active=17, idle=3, waiting=3341)
+2026-11-12T11:33:34.991+05:30  WARN 10052 --- [flash-sale-reservation-service] [   virtual-8194] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:34.991+05:30 ERROR 10052 --- [flash-sale-reservation-service] [   virtual-8194] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5045ms (total=20, active=19, idle=1, waiting=3338)
+2026-11-12T11:33:34.991+05:30  WARN 10052 --- [flash-sale-reservation-service] [   virtual-1127] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:34.993+05:30 ERROR 10052 --- [flash-sale-reservation-service] [   virtual-1127] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5044ms (total=20, active=18, idle=2, waiting=3336)
+2026-11-12T11:33:34.993+05:30  WARN 10052 --- [flash-sale-reservation-service] [   virtual-8446] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:34.993+05:30 ERROR 10052 --- [flash-sale-reservation-service] [   virtual-8446] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5030ms (total=20, active=18, idle=2, waiting=3332)
+2026-11-12T11:33:35.013+05:30  WARN 10052 --- [flash-sale-reservation-service] [   virtual-4779] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:35.013+05:30 ERROR 10052 --- [flash-sale-reservation-service] [   virtual-4779] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5046ms (total=20, active=18, idle=2, waiting=3301)
+2026-11-12T11:33:35.066+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-10484] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:35.067+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-10484] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5101ms (total=20, active=18, idle=2, waiting=3212)
+2026-11-12T11:33:35.067+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-10692] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:35.068+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-10692] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5045ms (total=20, active=19, idle=1, waiting=3210)
+2026-11-12T11:33:35.068+05:30  WARN 10052 --- [flash-sale-reservation-service] [   virtual-8779] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:35.068+05:30 ERROR 10052 --- [flash-sale-reservation-service] [   virtual-8779] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5045ms (total=20, active=19, idle=1, waiting=3209)
+2026-11-12T11:33:35.069+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-10675] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:35.069+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-10675] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5046ms (total=20, active=19, idle=1, waiting=3207)
+2026-11-12T11:33:35.089+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-10708] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:35.089+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-10708] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5057ms (total=20, active=20, idle=0, waiting=3176)
+2026-11-12T11:33:35.090+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-10735] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:35.090+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-10735] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5057ms (total=20, active=20, idle=0, waiting=3177)
+2026-11-12T11:33:35.090+05:30  WARN 10052 --- [flash-sale-reservation-service] [   virtual-8869] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:35.091+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-10765] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:35.091+05:30 ERROR 10052 --- [flash-sale-reservation-service] [   virtual-8869] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5031ms (total=20, active=20, idle=0, waiting=3178)
+2026-11-12T11:33:35.091+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-10756] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:35.091+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-10756] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5031ms (total=20, active=20, idle=0, waiting=3174)
+2026-11-12T11:33:35.091+05:30  WARN 10052 --- [flash-sale-reservation-service] [   virtual-8886] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:35.091+05:30 ERROR 10052 --- [flash-sale-reservation-service] [   virtual-8886] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5031ms (total=20, active=20, idle=0, waiting=3174)
+2026-11-12T11:33:35.091+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-10765] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5031ms (total=20, active=20, idle=0, waiting=3177)
+2026-11-12T11:33:35.198+05:30  WARN 10052 --- [flash-sale-reservation-service] [   virtual-7266] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:35.199+05:30 ERROR 10052 --- [flash-sale-reservation-service] [   virtual-7266] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5119ms (total=20, active=16, idle=4, waiting=2977)
+2026-11-12T11:33:35.199+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-10913] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:35.199+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-10913] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5120ms (total=20, active=16, idle=4, waiting=2975)
+2026-11-12T11:33:35.287+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-11611] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:35.287+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-11611] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5049ms (total=20, active=17, idle=3, waiting=2816)
+2026-11-12T11:33:35.287+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-11617] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:35.288+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-11617] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5050ms (total=20, active=16, idle=3, waiting=2815)
+2026-11-12T11:33:35.288+05:30  WARN 10052 --- [flash-sale-reservation-service] [   virtual-9265] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:35.288+05:30 ERROR 10052 --- [flash-sale-reservation-service] [   virtual-9265] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5034ms (total=20, active=17, idle=3, waiting=2813)
+2026-11-12T11:33:35.288+05:30  WARN 10052 --- [flash-sale-reservation-service] [   virtual-7426] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:35.288+05:30 ERROR 10052 --- [flash-sale-reservation-service] [   virtual-7426] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5034ms (total=20, active=17, idle=3, waiting=2811)
+2026-11-12T11:33:35.289+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-11640] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:35.289+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-11640] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5033ms (total=20, active=17, idle=3, waiting=2810)
+2026-11-12T11:33:35.289+05:30  WARN 10052 --- [flash-sale-reservation-service] [   virtual-5610] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:35.289+05:30 ERROR 10052 --- [flash-sale-reservation-service] [   virtual-5610] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5030ms (total=20, active=17, idle=3, waiting=2809)
+2026-11-12T11:33:35.302+05:30  WARN 10052 --- [flash-sale-reservation-service] [   virtual-7644] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:35.303+05:30 ERROR 10052 --- [flash-sale-reservation-service] [   virtual-7644] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5033ms (total=20, active=16, idle=4, waiting=2784)
+2026-11-12T11:33:35.467+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-11077] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:35.468+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-11077] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5202ms (total=20, active=17, idle=3, waiting=2490)
+2026-11-12T11:33:35.468+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-10465] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:35.469+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-10465] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5203ms (total=20, active=18, idle=2, waiting=2485)
+2026-11-12T11:33:35.469+05:30  WARN 10052 --- [flash-sale-reservation-service] [   virtual-5761] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:35.469+05:30 ERROR 10052 --- [flash-sale-reservation-service] [   virtual-5761] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5203ms (total=20, active=18, idle=2, waiting=2483)
+2026-11-12T11:33:35.469+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-11090] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:35.470+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-11090] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5203ms (total=20, active=18, idle=2, waiting=2482)
+2026-11-12T11:33:35.470+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-11133] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:35.470+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-11133] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5203ms (total=20, active=18, idle=2, waiting=2481)
+2026-11-12T11:33:35.470+05:30  WARN 10052 --- [flash-sale-reservation-service] [   virtual-9440] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:35.470+05:30 ERROR 10052 --- [flash-sale-reservation-service] [   virtual-9440] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5204ms (total=20, active=18, idle=2, waiting=2479)
+2026-11-12T11:33:35.471+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-11156] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:35.471+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-11156] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5204ms (total=20, active=17, idle=3, waiting=2477)
+2026-11-12T11:33:35.471+05:30  WARN 10052 --- [flash-sale-reservation-service] [   virtual-2750] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:35.471+05:30 ERROR 10052 --- [flash-sale-reservation-service] [   virtual-2750] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5204ms (total=20, active=18, idle=2, waiting=2475)
+2026-11-12T11:33:35.472+05:30  WARN 10052 --- [flash-sale-reservation-service] [   virtual-9682] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:35.472+05:30 ERROR 10052 --- [flash-sale-reservation-service] [   virtual-9682] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5204ms (total=20, active=18, idle=2, waiting=2474)
+2026-11-12T11:33:35.472+05:30  WARN 10052 --- [flash-sale-reservation-service] [   virtual-5876] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:35.472+05:30 ERROR 10052 --- [flash-sale-reservation-service] [   virtual-5876] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5205ms (total=20, active=16, idle=4, waiting=2471)
+2026-11-12T11:33:35.473+05:30  WARN 10052 --- [flash-sale-reservation-service] [   virtual-7636] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:35.473+05:30 ERROR 10052 --- [flash-sale-reservation-service] [   virtual-7636] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5204ms (total=20, active=17, idle=3, waiting=2470)
+2026-11-12T11:33:35.473+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-10238] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:35.473+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-10238] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5201ms (total=20, active=18, idle=2, waiting=2467)
+2026-11-12T11:33:35.474+05:30  WARN 10052 --- [flash-sale-reservation-service] [   virtual-9877] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:35.474+05:30 ERROR 10052 --- [flash-sale-reservation-service] [   virtual-9877] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5201ms (total=20, active=18, idle=2, waiting=2464)
+2026-11-12T11:33:35.474+05:30  WARN 10052 --- [flash-sale-reservation-service] [   virtual-4259] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:35.474+05:30 ERROR 10052 --- [flash-sale-reservation-service] [   virtual-4259] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5202ms (total=20, active=18, idle=2, waiting=2462)
+2026-11-12T11:33:35.474+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-11197] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:35.474+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-11197] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5202ms (total=20, active=18, idle=2, waiting=2461)
+2026-11-12T11:33:35.475+05:30  WARN 10052 --- [flash-sale-reservation-service] [   virtual-7759] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:35.475+05:30 ERROR 10052 --- [flash-sale-reservation-service] [   virtual-7759] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5202ms (total=20, active=18, idle=2, waiting=2460)
+2026-11-12T11:33:35.475+05:30  WARN 10052 --- [flash-sale-reservation-service] [   virtual-6013] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:35.475+05:30 ERROR 10052 --- [flash-sale-reservation-service] [   virtual-6013] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5202ms (total=20, active=18, idle=2, waiting=2459)
+2026-11-12T11:33:35.476+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-11672] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:35.476+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-11672] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5142ms (total=20, active=18, idle=2, waiting=2458)
+2026-11-12T11:33:35.476+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-11703] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:35.476+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-11703] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5113ms (total=20, active=18, idle=2, waiting=2456)
+2026-11-12T11:33:35.477+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-11713] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:35.477+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-11713] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5110ms (total=20, active=18, idle=2, waiting=2455)
+2026-11-12T11:33:35.477+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-11714] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:35.477+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-11714] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5110ms (total=20, active=18, idle=2, waiting=2453)
+2026-11-12T11:33:35.477+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-11722] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:35.478+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-11722] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5108ms (total=20, active=18, idle=2, waiting=2449)
+2026-11-12T11:33:35.478+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-10514] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:35.478+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-10514] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5107ms (total=20, active=18, idle=2, waiting=2448)
+2026-11-12T11:33:35.478+05:30  WARN 10052 --- [flash-sale-reservation-service] [   virtual-9978] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:35.479+05:30 ERROR 10052 --- [flash-sale-reservation-service] [   virtual-9978] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5107ms (total=20, active=18, idle=2, waiting=2447)
+2026-11-12T11:33:35.479+05:30  WARN 10052 --- [flash-sale-reservation-service] [   virtual-9994] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:35.479+05:30 ERROR 10052 --- [flash-sale-reservation-service] [   virtual-9994] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5108ms (total=20, active=18, idle=2, waiting=2445)
+2026-11-12T11:33:35.479+05:30  WARN 10052 --- [flash-sale-reservation-service] [   virtual-8112] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:35.480+05:30 ERROR 10052 --- [flash-sale-reservation-service] [   virtual-8112] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5108ms (total=20, active=18, idle=2, waiting=2444)
+2026-11-12T11:33:35.480+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-10121] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:35.480+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-10121] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5109ms (total=20, active=18, idle=2, waiting=2442)
+2026-11-12T11:33:35.480+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-10546] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:35.480+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-10546] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5110ms (total=20, active=18, idle=2, waiting=2440)
+2026-11-12T11:33:35.492+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-10481] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:35.492+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-10481] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5010ms (total=20, active=17, idle=3, waiting=2420)
+2026-11-12T11:33:35.493+05:30  WARN 10052 --- [flash-sale-reservation-service] [   virtual-6585] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:35.493+05:30 ERROR 10052 --- [flash-sale-reservation-service] [   virtual-6585] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5008ms (total=20, active=16, idle=4, waiting=2418)
+2026-11-12T11:33:35.501+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-10361] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:35.501+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-10361] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5015ms (total=20, active=17, idle=3, waiting=2402)
+2026-11-12T11:33:35.502+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-10880] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:35.502+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-10880] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5018ms (total=20, active=17, idle=3, waiting=2400)
+2026-11-12T11:33:35.520+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-10903] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:35.520+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-10903] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5037ms (total=20, active=16, idle=4, waiting=2370)
+2026-11-12T11:33:35.521+05:30  WARN 10052 --- [flash-sale-reservation-service] [   virtual-7867] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:35.521+05:30 ERROR 10052 --- [flash-sale-reservation-service] [   virtual-7867] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5038ms (total=20, active=18, idle=2, waiting=2367)
+2026-11-12T11:33:35.521+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-11646] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:35.521+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-11646] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5033ms (total=20, active=18, idle=2, waiting=2366)
+2026-11-12T11:33:35.521+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-11402] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:35.521+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-11402] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5033ms (total=20, active=17, idle=3, waiting=2365)
+2026-11-12T11:33:35.530+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-11796] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:35.530+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-11796] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5000ms (total=20, active=15, idle=5, waiting=2347)
+2026-11-12T11:33:35.843+05:30  WARN 10052 --- [flash-sale-reservation-service] [   virtual-9717] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:35.843+05:30 ERROR 10052 --- [flash-sale-reservation-service] [   virtual-9717] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5321ms (total=20, active=16, idle=4, waiting=1825)
+2026-11-12T11:33:35.844+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-11426] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:35.844+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-11426] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5318ms (total=20, active=17, idle=3, waiting=1824)
+2026-11-12T11:33:35.844+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-11779] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:35.845+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-11779] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5318ms (total=20, active=16, idle=4, waiting=1823)
+2026-11-12T11:33:35.845+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-11813] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:35.845+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-11813] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5314ms (total=20, active=16, idle=4, waiting=1822)
+2026-11-12T11:33:35.845+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-11818] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:35.845+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-11818] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5314ms (total=20, active=15, idle=5, waiting=1821)
+2026-11-12T11:33:35.847+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-11856] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:35.847+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-11856] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5309ms (total=20, active=16, idle=4, waiting=1818)
+2026-11-12T11:33:35.847+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-11860] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:35.847+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-11860] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5309ms (total=20, active=16, idle=4, waiting=1817)
+2026-11-12T11:33:35.847+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-11877] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:35.847+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-11877] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5308ms (total=20, active=16, idle=4, waiting=1816)
+2026-11-12T11:33:35.848+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-11893] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:35.848+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-11893] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5307ms (total=20, active=15, idle=5, waiting=1815)
+2026-11-12T11:33:35.862+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-13338] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:35.862+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-13338] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5004ms (total=20, active=15, idle=5, waiting=1792)
+2026-11-12T11:33:35.885+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-13456] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:35.885+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-13456] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5018ms (total=20, active=17, idle=3, waiting=1757)
+2026-11-12T11:33:35.886+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-11905] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:35.886+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-11905] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5346ms (total=20, active=17, idle=3, waiting=1754)
+2026-11-12T11:33:35.887+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-11904] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:35.887+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-11904] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5346ms (total=20, active=17, idle=3, waiting=1751)
+2026-11-12T11:33:35.889+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-13458] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:35.889+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-13458] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5022ms (total=20, active=17, idle=3, waiting=1746)
+2026-11-12T11:33:35.920+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-11924] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:35.920+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-11924] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5378ms (total=20, active=17, idle=3, waiting=1693)
+2026-11-12T11:33:35.921+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-11932] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:35.921+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-11932] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5378ms (total=20, active=17, idle=3, waiting=1692)
+2026-11-12T11:33:35.921+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-11941] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:35.921+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-11941] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5378ms (total=20, active=16, idle=4, waiting=1690)
+2026-11-12T11:33:35.921+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-11959] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:35.921+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-11959] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5377ms (total=20, active=17, idle=3, waiting=1688)
+2026-11-12T11:33:35.921+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-11864] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:35.922+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-11864] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5377ms (total=20, active=17, idle=3, waiting=1687)
+2026-11-12T11:33:35.922+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-11982] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:35.922+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-11982] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5376ms (total=20, active=16, idle=4, waiting=1686)
+2026-11-12T11:33:35.922+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-11989] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:35.922+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-11989] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5376ms (total=20, active=17, idle=3, waiting=1685)
+2026-11-12T11:33:35.934+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-11990] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:35.934+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-11990] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5387ms (total=20, active=17, idle=3, waiting=1662)
+2026-11-12T11:33:35.975+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-12033] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:35.976+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-12033] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5424ms (total=20, active=16, idle=4, waiting=1594)
+2026-11-12T11:33:35.978+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-12036] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:35.980+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-12036] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5427ms (total=20, active=15, idle=5, waiting=1591)
+2026-11-12T11:33:35.981+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-12038] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:35.981+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-12038] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5430ms (total=20, active=16, idle=4, waiting=1586)
+2026-11-12T11:33:35.982+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-12060] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:35.982+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-12060] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5427ms (total=20, active=15, idle=5, waiting=1584)
+2026-11-12T11:33:35.982+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-12048] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:35.982+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-12048] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5422ms (total=20, active=15, idle=5, waiting=1583)
+2026-11-12T11:33:35.982+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-12092] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:35.982+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-12092] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5421ms (total=20, active=15, idle=5, waiting=1579)
+2026-11-12T11:33:35.983+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-12099] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:35.983+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-12099] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5421ms (total=20, active=16, idle=4, waiting=1578)
+2026-11-12T11:33:35.983+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-12102] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:35.983+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-12102] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5421ms (total=20, active=16, idle=4, waiting=1577)
+2026-11-12T11:33:35.983+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-12111] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:35.983+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-12111] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5420ms (total=20, active=15, idle=5, waiting=1576)
+2026-11-12T11:33:35.984+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-12132] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:35.984+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-12132] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5416ms (total=20, active=17, idle=3, waiting=1573)
+2026-11-12T11:33:35.984+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-12186] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:35.984+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-12186] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5406ms (total=20, active=16, idle=4, waiting=1572)
+2026-11-12T11:33:35.984+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-12216] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:35.984+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-12216] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5402ms (total=20, active=17, idle=3, waiting=1570)
+2026-11-12T11:33:35.985+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-12225] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:35.985+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-12225] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5402ms (total=20, active=16, idle=4, waiting=1569)
+2026-11-12T11:33:35.985+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-12234] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:35.985+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-12234] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5401ms (total=20, active=17, idle=3, waiting=1568)
+2026-11-12T11:33:35.985+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-12246] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:35.985+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-12246] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5401ms (total=20, active=17, idle=3, waiting=1567)
+2026-11-12T11:33:35.986+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-12251] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:35.986+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-12251] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5401ms (total=20, active=17, idle=3, waiting=1566)
+2026-11-12T11:33:35.986+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-12260] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:35.986+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-12260] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5400ms (total=20, active=17, idle=3, waiting=1565)
+2026-11-12T11:33:35.986+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-12268] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:35.986+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-12268] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5399ms (total=20, active=17, idle=3, waiting=1564)
+2026-11-12T11:33:35.987+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-12296] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:35.987+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-12296] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5397ms (total=20, active=17, idle=3, waiting=1563)
+2026-11-12T11:33:35.987+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-12317] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:35.987+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-12317] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5395ms (total=20, active=15, idle=5, waiting=1562)
+2026-11-12T11:33:35.988+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-12329] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:35.988+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-12329] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5394ms (total=20, active=16, idle=4, waiting=1559)
+2026-11-12T11:33:35.988+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-12333] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:35.988+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-12333] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5394ms (total=20, active=17, idle=3, waiting=1557)
+2026-11-12T11:33:35.989+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-12334] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:35.989+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-12334] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5394ms (total=20, active=16, idle=4, waiting=1555)
+2026-11-12T11:33:35.989+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-12352] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:35.989+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-12352] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5392ms (total=20, active=17, idle=3, waiting=1554)
+2026-11-12T11:33:35.989+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-12368] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:35.989+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-12368] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5389ms (total=20, active=17, idle=3, waiting=1554)
+2026-11-12T11:33:35.990+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-12369] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:35.990+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-12369] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5389ms (total=20, active=16, idle=4, waiting=1552)
+2026-11-12T11:33:35.990+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-12383] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:35.990+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-12383] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5380ms (total=20, active=17, idle=3, waiting=1551)
+2026-11-12T11:33:35.990+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-12402] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:35.990+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-12402] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5373ms (total=20, active=17, idle=3, waiting=1549)
+2026-11-12T11:33:35.992+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-12403] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:35.992+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-12403] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5373ms (total=20, active=16, idle=4, waiting=1547)
+2026-11-12T11:33:35.992+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-12413] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:35.993+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-12413] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5371ms (total=20, active=17, idle=3, waiting=1545)
+2026-11-12T11:33:35.993+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-12440] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:35.993+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-12440] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5359ms (total=20, active=16, idle=4, waiting=1544)
+2026-11-12T11:33:35.993+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-12442] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:35.993+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-12442] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5359ms (total=20, active=17, idle=3, waiting=1542)
+2026-11-12T11:33:35.994+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-12451] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:35.994+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-12451] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5354ms (total=20, active=16, idle=4, waiting=1542)
+2026-11-12T11:33:36.030+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-12499] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:36.030+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-12499] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5374ms (total=20, active=13, idle=7, waiting=1483)
+2026-11-12T11:33:36.030+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-12501] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:36.030+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-12501] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5374ms (total=20, active=15, idle=5, waiting=1481)
+2026-11-12T11:33:36.031+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-11676] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:36.031+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-11676] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5374ms (total=20, active=15, idle=5, waiting=1479)
+2026-11-12T11:33:36.031+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-12516] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:36.031+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-12516] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5370ms (total=20, active=15, idle=5, waiting=1479)
+2026-11-12T11:33:36.031+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-12528] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:36.031+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-12528] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5366ms (total=20, active=14, idle=6, waiting=1475)
+2026-11-12T11:33:36.032+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-12349] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:36.032+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-12349] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5366ms (total=20, active=15, idle=5, waiting=1473)
+2026-11-12T11:33:36.032+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-12540] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:36.032+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-12540] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5366ms (total=20, active=15, idle=5, waiting=1472)
+2026-11-12T11:33:36.032+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-12541] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:36.032+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-12541] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5366ms (total=20, active=15, idle=5, waiting=1471)
+2026-11-12T11:33:36.032+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-12554] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:36.032+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-12554] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5364ms (total=20, active=15, idle=5, waiting=1470)
+2026-11-12T11:33:36.033+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-12518] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:36.033+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-12518] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5364ms (total=20, active=15, idle=5, waiting=1469)
+2026-11-12T11:33:36.033+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-12581] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:36.033+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-12581] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5359ms (total=20, active=15, idle=5, waiting=1468)
+2026-11-12T11:33:36.033+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-12588] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:36.033+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-12588] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5357ms (total=20, active=15, idle=5, waiting=1467)
+2026-11-12T11:33:36.033+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-12590] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:36.033+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-12590] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5357ms (total=20, active=15, idle=5, waiting=1466)
+2026-11-12T11:33:36.034+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-12610] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:36.034+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-12610] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5354ms (total=20, active=15, idle=5, waiting=1465)
+2026-11-12T11:33:36.034+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-12614] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:36.034+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-12614] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5353ms (total=20, active=14, idle=6, waiting=1464)
+2026-11-12T11:33:36.034+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-12615] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:36.035+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-12615] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5354ms (total=20, active=14, idle=6, waiting=1462)
+2026-11-12T11:33:36.035+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-12625] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:36.035+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-12625] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5351ms (total=20, active=15, idle=5, waiting=1460)
+2026-11-12T11:33:36.035+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-12657] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:36.035+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-12657] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5330ms (total=20, active=15, idle=5, waiting=1459)
+2026-11-12T11:33:36.035+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-12664] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:36.035+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-12664] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5330ms (total=20, active=14, idle=6, waiting=1457)
+2026-11-12T11:33:36.037+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-12685] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:36.037+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-12685] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5326ms (total=20, active=13, idle=7, waiting=1454)
+2026-11-12T11:33:36.037+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-12691] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:36.037+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-12691] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5325ms (total=20, active=14, idle=6, waiting=1453)
+2026-11-12T11:33:36.000+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-12462] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:36.037+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-12462] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5359ms (total=20, active=15, idle=5, waiting=1530)
+2026-11-12T11:33:36.040+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-12703] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:36.041+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-12703] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5326ms (total=20, active=15, idle=5, waiting=1446)
+2026-11-12T11:33:36.044+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-12714] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:36.044+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-12714] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5330ms (total=20, active=15, idle=5, waiting=1436)
+2026-11-12T11:33:36.045+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-12741] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:36.045+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-12741] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5325ms (total=20, active=15, idle=5, waiting=1435)
+2026-11-12T11:33:36.048+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-12762] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:36.049+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-12762] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5325ms (total=20, active=16, idle=4, waiting=1426)
+2026-11-12T11:33:36.049+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-12770] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:36.049+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-12770] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5325ms (total=20, active=16, idle=4, waiting=1425)
+2026-11-12T11:33:36.049+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-12769] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:36.049+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-12769] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5325ms (total=20, active=16, idle=4, waiting=1424)
+2026-11-12T11:33:36.050+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-12784] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:36.050+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-12784] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5323ms (total=20, active=16, idle=4, waiting=1423)
+2026-11-12T11:33:36.050+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-12782] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:36.050+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-12782] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5323ms (total=20, active=16, idle=4, waiting=1422)
+2026-11-12T11:33:36.050+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-12811] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:36.051+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-12811] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5316ms (total=20, active=16, idle=4, waiting=1421)
+2026-11-12T11:33:36.051+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-12830] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:36.051+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-12830] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5309ms (total=20, active=15, idle=5, waiting=1420)
+2026-11-12T11:33:36.051+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-12712] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:36.051+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-12712] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5337ms (total=20, active=16, idle=4, waiting=1417)
+2026-11-12T11:33:36.051+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-11837] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:36.051+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-11837] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5283ms (total=20, active=16, idle=4, waiting=1415)
+2026-11-12T11:33:36.052+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-12854] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:36.052+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-12854] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5282ms (total=20, active=16, idle=4, waiting=1414)
+2026-11-12T11:33:36.052+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-12858] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:36.052+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-12858] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5282ms (total=20, active=16, idle=4, waiting=1413)
+2026-11-12T11:33:36.052+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-12869] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:36.052+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-12869] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5279ms (total=20, active=15, idle=5, waiting=1411)
+2026-11-12T11:33:36.053+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-12874] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:36.053+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-12874] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5279ms (total=20, active=15, idle=5, waiting=1410)
+2026-11-12T11:33:36.053+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-12884] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:36.053+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-12884] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5277ms (total=20, active=15, idle=5, waiting=1408)
+2026-11-12T11:33:36.053+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-12902] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:36.053+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-12902] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5274ms (total=20, active=16, idle=4, waiting=1407)
+2026-11-12T11:33:36.054+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-11913] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:36.054+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-11913] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5264ms (total=20, active=15, idle=5, waiting=1406)
+2026-11-12T11:33:36.054+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-12918] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:36.054+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-12918] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5264ms (total=20, active=15, idle=5, waiting=1405)
+2026-11-12T11:33:36.063+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-12914] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:36.065+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-12914] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5273ms (total=20, active=16, idle=4, waiting=1388)
+2026-11-12T11:33:36.067+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-12924] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:36.067+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-12924] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5275ms (total=20, active=16, idle=4, waiting=1382)
+2026-11-12T11:33:36.068+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-12931] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:36.069+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-12931] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5274ms (total=20, active=15, idle=5, waiting=1380)
+2026-11-12T11:33:36.105+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-12957] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:36.105+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-12957] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5306ms (total=20, active=16, idle=4, waiting=1318)
+2026-11-12T11:33:36.106+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-12969] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:36.106+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-12969] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5305ms (total=20, active=14, idle=6, waiting=1317)
+2026-11-12T11:33:36.106+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-12992] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:36.106+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-12992] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5303ms (total=20, active=15, idle=5, waiting=1313)
+2026-11-12T11:33:36.107+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-12995] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:36.107+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-12995] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5303ms (total=20, active=16, idle=4, waiting=1312)
+2026-11-12T11:33:36.107+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-12996] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:36.107+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-12996] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5304ms (total=20, active=16, idle=4, waiting=1311)
+2026-11-12T11:33:36.108+05:30  WARN 10052 --- [flash-sale-reservation-service] [   virtual-3442] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:36.108+05:30 ERROR 10052 --- [flash-sale-reservation-service] [   virtual-3442] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5302ms (total=20, active=16, idle=4, waiting=1310)
+2026-11-12T11:33:36.108+05:30  WARN 10052 --- [flash-sale-reservation-service] [   virtual-7911] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:36.108+05:30 ERROR 10052 --- [flash-sale-reservation-service] [   virtual-7911] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5303ms (total=20, active=16, idle=4, waiting=1309)
+2026-11-12T11:33:36.109+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-12947] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:36.109+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-12947] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5311ms (total=20, active=16, idle=4, waiting=1309)
+2026-11-12T11:33:36.109+05:30  WARN 10052 --- [flash-sale-reservation-service] [   virtual-1717] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:36.109+05:30 ERROR 10052 --- [flash-sale-reservation-service] [   virtual-1717] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5303ms (total=20, active=15, idle=5, waiting=1307)
+2026-11-12T11:33:36.109+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-13038] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:36.109+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-13038] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5301ms (total=20, active=15, idle=5, waiting=1304)
+2026-11-12T11:33:36.109+05:30  WARN 10052 --- [flash-sale-reservation-service] [   virtual-1848] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:36.109+05:30 ERROR 10052 --- [flash-sale-reservation-service] [   virtual-1848] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5303ms (total=20, active=16, idle=4, waiting=1305)
+2026-11-12T11:33:36.110+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-13079] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:36.110+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-13079] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5290ms (total=20, active=15, idle=5, waiting=1302)
+2026-11-12T11:33:36.109+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-13074] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:36.110+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-13074] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5291ms (total=20, active=16, idle=4, waiting=1303)
+2026-11-12T11:33:36.110+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-13102] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:36.110+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-13102] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5279ms (total=20, active=16, idle=4, waiting=1299)
+2026-11-12T11:33:36.111+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-13115] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:36.111+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-13115] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5279ms (total=20, active=16, idle=4, waiting=1298)
+2026-11-12T11:33:36.111+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-13116] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:36.111+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-13116] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5279ms (total=20, active=16, idle=4, waiting=1297)
+2026-11-12T11:33:36.120+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-12028] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:36.121+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-12028] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5287ms (total=20, active=16, idle=4, waiting=1281)
+2026-11-12T11:33:36.121+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-13153] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:36.121+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-13153] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5279ms (total=20, active=15, idle=5, waiting=1279)
+2026-11-12T11:33:36.121+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-13176] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:36.122+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-13176] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5277ms (total=20, active=14, idle=6, waiting=1278)
+2026-11-12T11:33:36.122+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-13186] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:36.122+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-13186] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5276ms (total=20, active=14, idle=6, waiting=1273)
+2026-11-12T11:33:36.122+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-13232] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:36.122+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-13232] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5267ms (total=20, active=14, idle=6, waiting=1271)
+2026-11-12T11:33:36.135+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-13239] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:36.136+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-13239] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5280ms (total=20, active=16, idle=4, waiting=1248)
+2026-11-12T11:33:36.160+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-13276] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:36.160+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-13276] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5304ms (total=20, active=17, idle=3, waiting=1203)
+2026-11-12T11:33:36.161+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-13278] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:36.161+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-13278] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5304ms (total=20, active=17, idle=3, waiting=1202)
+2026-11-12T11:33:36.161+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-13288] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:36.161+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-13288] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5304ms (total=20, active=17, idle=3, waiting=1201)
+2026-11-12T11:33:36.161+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-13295] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:36.161+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-13295] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5304ms (total=20, active=17, idle=3, waiting=1200)
+2026-11-12T11:33:36.162+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-13305] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:36.162+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-13305] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5304ms (total=20, active=17, idle=3, waiting=1199)
+2026-11-12T11:33:36.162+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-13306] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:36.162+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-13306] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5304ms (total=20, active=17, idle=3, waiting=1198)
+2026-11-12T11:33:36.162+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-13309] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:36.162+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-13309] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5304ms (total=20, active=17, idle=3, waiting=1197)
+2026-11-12T11:33:36.162+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-13310] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:36.163+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-13310] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5305ms (total=20, active=17, idle=3, waiting=1195)
+2026-11-12T11:33:36.163+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-13334] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:36.163+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-13334] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5304ms (total=20, active=17, idle=3, waiting=1193)
+2026-11-12T11:33:36.163+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-13342] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:36.163+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-13342] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5304ms (total=20, active=17, idle=3, waiting=1192)
+2026-11-12T11:33:36.165+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-13356] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:36.165+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-13356] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5305ms (total=20, active=16, idle=4, waiting=1189)
+2026-11-12T11:33:36.165+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-13357] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:36.165+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-13357] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5305ms (total=20, active=17, idle=3, waiting=1186)
+2026-11-12T11:33:36.166+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-13380] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:36.166+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-13380] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5305ms (total=20, active=16, idle=4, waiting=1185)
+2026-11-12T11:33:36.166+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-13393] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:36.167+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-13393] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5304ms (total=20, active=17, idle=3, waiting=1183)
+2026-11-12T11:33:36.167+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-13412] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:36.167+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-13412] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5304ms (total=20, active=17, idle=3, waiting=1182)
+2026-11-12T11:33:36.167+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-13426] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:36.167+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-13426] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5303ms (total=20, active=17, idle=3, waiting=1181)
+2026-11-12T11:33:36.168+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-13428] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:36.168+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-13428] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5303ms (total=20, active=17, idle=3, waiting=1180)
+2026-11-12T11:33:36.168+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-13434] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:36.168+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-13434] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5303ms (total=20, active=16, idle=4, waiting=1178)
+2026-11-12T11:33:36.168+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-13438] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:36.168+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-13438] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5303ms (total=20, active=17, idle=3, waiting=1175)
+2026-11-12T11:33:36.169+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-13444] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:36.169+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-13444] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5303ms (total=20, active=17, idle=3, waiting=1174)
+2026-11-12T11:33:36.169+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-13365] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:36.169+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-13365] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5303ms (total=20, active=16, idle=4, waiting=1172)
+2026-11-12T11:33:36.169+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-13531] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:36.169+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-13531] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5200ms (total=20, active=16, idle=4, waiting=1169)
+2026-11-12T11:33:36.189+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-13589] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:36.189+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-13589] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5181ms (total=20, active=15, idle=5, waiting=1138)
+2026-11-12T11:33:36.190+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-12515] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:36.190+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-12515] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5181ms (total=20, active=15, idle=5, waiting=1136)
+2026-11-12T11:33:36.190+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-13620] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:36.190+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-13620] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5176ms (total=20, active=16, idle=4, waiting=1133)
+2026-11-12T11:33:36.190+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-13639] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:36.190+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-13639] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5166ms (total=20, active=16, idle=4, waiting=1132)
+2026-11-12T11:33:36.191+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-13642] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:36.191+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-13642] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5165ms (total=20, active=16, idle=4, waiting=1131)
+2026-11-12T11:33:36.191+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-13648] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:36.191+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-13648] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5165ms (total=20, active=16, idle=4, waiting=1130)
+2026-11-12T11:33:36.192+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-13647] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:36.192+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-13647] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5166ms (total=20, active=16, idle=4, waiting=1129)
+2026-11-12T11:33:36.192+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-13652] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:36.192+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-13652] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5166ms (total=20, active=15, idle=5, waiting=1128)
+2026-11-12T11:33:36.193+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-13669] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:36.193+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-13669] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5164ms (total=20, active=15, idle=5, waiting=1126)
+2026-11-12T11:33:36.193+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-11692] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:36.193+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-11692] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5158ms (total=20, active=15, idle=5, waiting=1124)
+2026-11-12T11:33:36.198+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-13736] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:36.198+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-13736] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5154ms (total=20, active=16, idle=4, waiting=1114)
+2026-11-12T11:33:36.198+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-12617] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:36.198+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-12617] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5151ms (total=20, active=16, idle=4, waiting=1113)
+2026-11-12T11:33:36.199+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-13788] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:36.199+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-13788] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5069ms (total=20, active=16, idle=4, waiting=1112)
+2026-11-12T11:33:36.199+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-13789] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:36.199+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-13789] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5069ms (total=20, active=15, idle=5, waiting=1110)
+2026-11-12T11:33:36.199+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-13792] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:36.199+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-13792] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5069ms (total=20, active=16, idle=4, waiting=1109)
+2026-11-12T11:33:36.199+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-13800] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:36.199+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-13800] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5068ms (total=20, active=16, idle=4, waiting=1108)
+2026-11-12T11:33:36.200+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-12687] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:36.200+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-12687] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5067ms (total=20, active=16, idle=4, waiting=1106)
+2026-11-12T11:33:36.200+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-13808] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:36.200+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-13808] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5066ms (total=20, active=16, idle=4, waiting=1105)
+2026-11-12T11:33:36.200+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-13830] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:36.200+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-13830] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5062ms (total=20, active=15, idle=5, waiting=1104)
+2026-11-12T11:33:36.201+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-13677] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:36.201+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-13677] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5060ms (total=20, active=15, idle=5, waiting=1102)
+2026-11-12T11:33:36.201+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-11939] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:36.201+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-11939] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5060ms (total=20, active=16, idle=4, waiting=1101)
+2026-11-12T11:33:36.201+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-13859] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:36.201+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-13859] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5060ms (total=20, active=15, idle=5, waiting=1100)
+2026-11-12T11:33:36.201+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-13864] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:36.201+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-13864] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5060ms (total=20, active=15, idle=5, waiting=1099)
+2026-11-12T11:33:36.202+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-13871] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:36.202+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-13871] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5060ms (total=20, active=15, idle=5, waiting=1097)
+2026-11-12T11:33:36.202+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-13885] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:36.202+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-13885] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5059ms (total=20, active=17, idle=3, waiting=1095)
+2026-11-12T11:33:36.202+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-11770] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:36.202+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-11770] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5056ms (total=20, active=17, idle=3, waiting=1094)
+2026-11-12T11:33:36.202+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-13916] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:36.203+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-13916] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5053ms (total=20, active=17, idle=3, waiting=1093)
+2026-11-12T11:33:36.203+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-11986] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:36.203+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-11986] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5050ms (total=20, active=17, idle=3, waiting=1092)
+2026-11-12T11:33:36.203+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-13940] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:36.203+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-13940] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5048ms (total=20, active=17, idle=3, waiting=1091)
+2026-11-12T11:33:36.203+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-13948] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:36.203+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-13948] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5047ms (total=20, active=17, idle=3, waiting=1090)
+2026-11-12T11:33:36.203+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-13950] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:36.203+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-13950] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5047ms (total=20, active=17, idle=3, waiting=1089)
+2026-11-12T11:33:36.203+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-13959] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:36.203+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-13959] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5045ms (total=20, active=17, idle=3, waiting=1087)
+2026-11-12T11:33:36.203+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-13962] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:36.203+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-13962] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5045ms (total=20, active=16, idle=4, waiting=1086)
+2026-11-12T11:33:36.264+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-14008] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:36.265+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-14008] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5046ms (total=20, active=18, idle=2, waiting=1004)
+2026-11-12T11:33:36.276+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-14042] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:36.277+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-14042] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5055ms (total=20, active=17, idle=3, waiting=980)
+2026-11-12T11:33:36.277+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-14055] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:36.277+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-14055] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5035ms (total=20, active=17, idle=3, waiting=979)
+2026-11-12T11:33:36.278+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-14017] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:36.278+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-14017] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5059ms (total=20, active=18, idle=2, waiting=975)
+2026-11-12T11:33:36.279+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-14062] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:36.279+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-14062] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5034ms (total=20, active=18, idle=2, waiting=973)
+2026-11-12T11:33:36.280+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-14021] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:36.280+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-14021] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5061ms (total=20, active=18, idle=2, waiting=970)
+2026-11-12T11:33:36.287+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-14023] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:36.287+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-14023] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5067ms (total=20, active=14, idle=6, waiting=958)
+2026-11-12T11:33:36.300+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-14075] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:36.300+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-14075] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5053ms (total=20, active=17, idle=3, waiting=933)
+2026-11-12T11:33:36.328+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-13978] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:36.328+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-13978] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5113ms (total=20, active=18, idle=2, waiting=889)
+2026-11-12T11:33:36.328+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-14002] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:36.328+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-14002] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5111ms (total=20, active=18, idle=2, waiting=887)
+2026-11-12T11:33:36.329+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-14064] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:36.329+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-14064] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5083ms (total=20, active=18, idle=2, waiting=886)
+2026-11-12T11:33:36.329+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-14072] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:36.329+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-14072] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5082ms (total=20, active=18, idle=2, waiting=885)
+2026-11-12T11:33:36.331+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-14136] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:36.331+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-14136] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5005ms (total=20, active=17, idle=3, waiting=880)
+2026-11-12T11:33:36.337+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-14112] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:36.337+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-14112] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5019ms (total=20, active=17, idle=3, waiting=867)
+2026-11-12T11:33:36.337+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-14043] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:36.478+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-14043] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5117ms (total=20, active=17, idle=3, waiting=866)
+2026-11-12T11:33:36.377+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-14102] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:36.479+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-14102] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5061ms (total=20, active=17, idle=3, waiting=803)
+2026-11-12T11:33:36.382+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-14163] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:36.479+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-14163] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5051ms (total=20, active=16, idle=4, waiting=792)
+2026-11-12T11:33:36.567+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-14316] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:36.567+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-14316] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5000ms (total=20, active=17, idle=3, waiting=445)
+2026-11-12T11:33:36.567+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-14283] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:36.567+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-14283] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5012ms (total=20, active=17, idle=3, waiting=444)
+2026-11-12T11:33:36.596+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-14319] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:36.596+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-14319] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5034ms (total=20, active=16, idle=4, waiting=385)
+2026-11-12T11:33:36.618+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-14416] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:36.618+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-14416] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5012ms (total=20, active=16, idle=4, waiting=344)
+2026-11-12T11:33:36.645+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-14199] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:36.645+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-14199] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5236ms (total=20, active=16, idle=4, waiting=288)
+2026-11-12T11:33:36.657+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-14474] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:36.657+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-14474] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5005ms (total=20, active=16, idle=4, waiting=265)
+2026-11-12T11:33:36.660+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-14481] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:36.660+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-14481] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5008ms (total=20, active=17, idle=3, waiting=256)
+2026-11-12T11:33:36.661+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-14236] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:36.661+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-14236] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5140ms (total=20, active=17, idle=3, waiting=255)
+2026-11-12T11:33:36.661+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-14262] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:36.661+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-14262] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5113ms (total=20, active=17, idle=3, waiting=254)
+2026-11-12T11:33:36.679+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-14482] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:36.679+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-14482] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5027ms (total=20, active=13, idle=7, waiting=216)
+2026-11-12T11:33:36.679+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-14467] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:36.679+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-14467] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5029ms (total=20, active=16, idle=4, waiting=215)
+2026-11-12T11:33:36.719+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-14658] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:36.719+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-14658] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5020ms (total=20, active=15, idle=4, waiting=141)
+2026-11-12T11:33:36.722+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-14744] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:36.722+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-14744] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5008ms (total=20, active=15, idle=5, waiting=135)
+2026-11-12T11:33:36.729+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-14846] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:36.730+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-14846] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5007ms (total=20, active=17, idle=3, waiting=119)
+2026-11-12T11:33:36.741+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-14696] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:36.741+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-14696] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5035ms (total=20, active=17, idle=3, waiting=95)
+2026-11-12T11:33:36.752+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-14942] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:36.752+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-14942] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5021ms (total=20, active=17, idle=3, waiting=50)
+2026-11-12T11:33:36.756+05:30  WARN 10052 --- [flash-sale-reservation-service] [  virtual-14437] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
+2026-11-12T11:33:36.756+05:30 ERROR 10052 --- [flash-sale-reservation-service] [  virtual-14437] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 5092ms (total=20, active=17, idle=3, waiting=43)
+[ERROR] Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 23.43 s <<< FAILURE! -- in com.flashsale.ReservationConcurrencyTest
+[ERROR] com.flashsale.ReservationConcurrencyTest.test20KConcurrentRequestsYield10kSuccess -- Time elapsed: 19.24 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: 
+
+expected: 10000
+ but was: 9999
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at com.flashsale.ReservationConcurrencyTest.test20KConcurrentRequestsYield10kSuccess(ReservationConcurrencyTest.java:75)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+
+[INFO] 
+[INFO] Results:
+[INFO] 
+[ERROR] Failures: 
+[ERROR]   ReservationConcurrencyTest.test20KConcurrentRequestsYield10kSuccess:75 
+expected: 10000
+ but was: 9999
+[INFO] 
+[ERROR] Tests run: 1, Failures: 1, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  26.197 s
+[INFO] Finished at: 2026-11-12T11:33:37+05:30
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:3.2.5:test (default-test) on project reservation-service: There are test failures.
+[ERROR] 
+[ERROR] Please refer to D:\dropzone\target\surefire-reports for the individual test results.
+[ERROR] Please refer to dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException

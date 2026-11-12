@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flash Sale DB Schema</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #f5f5f5;
+            padding: 20px;
+            color: #333;
+        }
+        .container { max-width: 1200px; margin: 0 auto; }
+        h1 { margin-bottom: 30px; color: #222; }
+        .tabs {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #ddd;
+        }
+        .tab-btn {
+            padding: 10px 20px;
+            border: none;
+            background: none;
+            cursor: pointer;
+            font-size: 16px;
+            border-bottom: 3px solid transparent;
+            transition: all 0.2s;
+        }
+        .tab-btn.active {
+            border-bottom-color: #0066cc;
+            color: #0066cc;
+        }
+        .tab-content {
+            display: none;
+            animation: fadeIn 0.2s;
+        }
+        .tab-content.active { display: block; }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+        /* Diagram */
+        svg { background: white; border-radius: 8px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
+
+        /* Schema */
+        .schema {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            padding: 20px;
+        }
+        .table-def {
+            margin-bottom: 30px;
+        }
+        .table-name {
+            font-size: 18px;
+            font-weight: bold;
+            color: #0066cc;
+            margin-bottom: 10px;
+            border-bottom: 2px solid #0066cc;
+            padding-bottom: 8px;
+        }
+        .columns {
+            font-family: 'Courier New', monospace;
+            font-size: 13px;
+            line-height: 1.6;
+        }
+        .column { padding: 6px 10px; margin-bottom: 4px; }
+        .pk { background: #e3f2fd; font-weight: bold; }
+        .fk { background: #fff3e0; }
+        .constraint { background: #f3e5f5; margin-top: 10px; padding: 8px 10px; font-size: 12px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Flash Sale Reservation Service — Database Schema</h1>
+
+        <div class="tabs">
+            <button class="tab-btn active" onclick="showTab(event, 'diagram')">ER Diagram</button>
+            <button class="tab-btn" onclick="showTab(event, 'schema')">Schema Definition</button>
+        </div>
+
+        <!-- ER Diagram Tab -->
+        <div id="diagram" class="tab-content active">
+            <svg width="800" height="600" viewBox="0 0 800 600">
+                <!-- Drops Table -->
+                <rect x="50" y="50" width="200" height="150" fill="#e3f2fd" stroke="#0066cc" stroke-width="2" rx="4"/>
+                <text x="150" y="75" font-size="16" font-weight="bold" text-anchor="middle" fill="#0066cc">drops</text>
+                <line x1="50" y1="85" x2="250" y2="85" stroke="#0066cc" stroke-width="1"/>
+                <text x="60" y="105" font-size="12" fill="#333">🔑 id (VARCHAR)</text>
+                <text x="60" y="125" font-size="12" fill="#333">sku (VARCHAR)</text>
+                <text x="60" y="145" font-size="12" fill="#333">totalUnits (INT)</text>
+                <text x="60" y="165" font-size="12" fill="#333">startedAt (TIMESTAMP)</text>
+                <text x="60" y="185" font-size="12" fill="#333">endsAt (TIMESTAMP)</text>
+
+                <!-- Stock Table -->
+                <rect x="550" y="50" width="200" height="120" fill="#fff3e0" stroke="#ff9800" stroke-width="2" rx="4"/>
+                <text x="650" y="75" font-size="16" font-weight="bold" text-anchor="middle" fill="#ff9800">stock</text>
+                <line x1="550" y1="85" x2="750" y2="85" stroke="#ff9800" stroke-width="1"/>
+                <text x="560" y="105" font-size="12" fill="#333">🔑 dropId (FK)</text>
+                <text x="560" y="125" font-size="12" fill="#333">remaining (INT)</text>
+                <text x="560" y="145" font-size="12" fill="#333">asOf (TIMESTAMP)</text>
+                <text x="560" y="165" font-size="12" fill="#333">version (BIGINT)</text>
+
+                <!-- Reservations Table -->
+                <rect x="250" y="300" width="300" height="200" fill="#f3e5f5" stroke="#9c27b0" stroke-width="2" rx="4"/>
+                <text x="400" y="325" font-size="16" font-weight="bold" text-anchor="middle" fill="#9c27b0">reservations</text>
+                <line x1="250" y1="335" x2="550" y2="335" stroke="#9c27b0" stroke-width="1"/>
+                <text x="260" y="355" font-size="12" fill="#333">🔑 id (UUID)</text>
+                <text x="260" y="375" font-size="12" fill="#333">🔗 dropId (FK → drops)</text>
+                <text x="260" y="395" font-size="12" fill="#333">userId (VARCHAR)</text>
+                <text x="260" y="415" font-size="12" fill="#333">idempotencyKey (VARCHAR)</text>
+                <text x="260" y="435" font-size="12" fill="#333">quantity (INT)</text>
+                <text x="260" y="455" font-size="12" fill="#333">state (ENUM)</text>
+                <text x="260" y="475" font-size="12" fill="#333">createdAt (TIMESTAMP)</text>
+                <text x="260" y="495" font-size="12" fill="#333">expiresAt (TIMESTAMP)</text>
+
+                <!-- Relationships -->
+                <!-- drops to stock (1:1) -->
+                <line x1="250" y1="125" x2="550" y2="110" stroke="#ff6b6b" stroke-width="2" stroke-dasharray="5,5"/>
+                <text x="380" y="110" font-size="11" fill="#ff6b6b">1:1</text>
+
+                <!-- drops to reservations (1:N) -->
+                <line x1="150" y1="200" x2="350" y2="300" stroke="#4caf50" stroke-width="2" stroke-dasharray="5,5"/>
+                <text x="220" y="250" font-size="11" fill="#4caf50">1:N</text>
+
+                <!-- Legend -->
+                <rect x="50" y="520" width="700" height="60" fill="#f9f9f9" stroke="#ddd" stroke-width="1" rx="4"/>
+                <text x="70" y="540" font-size="12" fill="#666">🔑 = Primary Key  |  🔗 = Foreign Key  |  — Red dashed = 1:1 (stock per drop)  |  — Green dashed = 1:N (reservations per drop)</text>
+                <text x="70" y="560" font-size="12" fill="#666">Unique Constraint: (dropId, userId, idempotencyKey) ensures idempotent reservations</text>
+            </svg>
+        </div>
+
+        <!-- Schema Definition Tab -->
+        <div id="schema" class="tab-content">
+            <div class="schema">
+                <div class="table-def">
+                    <div class="table-name">drops</div>
+                    <div class="columns">
+                        <div class="column pk">id VARCHAR(255) PRIMARY KEY</div>
+                        <div class="column">sku VARCHAR(255) NOT NULL</div>
+                        <div class="column">totalUnits INT NOT NULL</div>
+                        <div class="column">startedAt TIMESTAMP NOT NULL</div>
+                        <div class="column">endsAt TIMESTAMP NOT NULL</div>
+                        <div class="column">version BIGINT DEFAULT 0</div>
+                    </div>
+                </div>
+
+                <div class="table-def">
+                    <div class="table-name">stock</div>
+                    <div class="columns">
+                        <div class="column pk">dropId VARCHAR(255) PRIMARY KEY</div>
+                        <div class="column fk">FOREIGN KEY (dropId) REFERENCES drops(id)</div>
+                        <div class="column">remaining INT NOT NULL</div>
+                        <div class="column">asOf TIMESTAMP NOT NULL</div>
+                        <div class="column">version BIGINT DEFAULT 0</div>
+                    </div>
+                    <div class="constraint">SELECT … FOR UPDATE on stock row for atomic check-and-decrement</div>
+                </div>
+
+                <div class="table-def">
+                    <div class="table-name">reservations</div>
+                    <div class="columns">
+                        <div class="column pk">id UUID PRIMARY KEY DEFAULT gen_random_uuid()</div>
+                        <div class="column fk">dropId VARCHAR(255) NOT NULL, FOREIGN KEY REFERENCES drops(id)</div>
+                        <div class="column">userId VARCHAR(255) NOT NULL</div>
+                        <div class="column">idempotencyKey VARCHAR(255) NOT NULL</div>
+                        <div class="column">quantity INT NOT NULL</div>
+                        <div class="column">state VARCHAR(50) NOT NULL (RESERVED, PAID, EXPIRED, CANCELLED)</div>
+                        <div class="column">createdAt TIMESTAMP NOT NULL</div>
+                        <div class="column">paidAt TIMESTAMP</div>
+                        <div class="column">expiresAt TIMESTAMP NOT NULL</div>
+                        <div class="column">version BIGINT DEFAULT 0</div>
+                    </div>
+                    <div class="constraint">UNIQUE (dropId, userId, idempotencyKey) — prevents duplicate reservations</div>
+                    <div class="constraint">INDEX (dropId, state) — for finding active/expired reservations</div>
+                    <div class="constraint">INDEX (createdAt) — for expiry worker queries</div>
+                </div>
+
+                <div class="table-def" style="background: #fffde7; padding: 15px; border-radius: 4px;">
+                    <div style="font-weight: bold; margin-bottom: 10px; color: #f57f17;">Key Design Points:</div>
+                    <ul style="margin-left: 20px; line-height: 1.8;">
+                        <li><strong>stock table:</strong> One row per drop. SELECT … FOR UPDATE locks this row, forcing serialization of all reserve attempts.</li>
+                        <li><strong>Idempotency:</strong> Unique constraint on (dropId, userId, idempotencyKey) ensures the same request never reserves twice.</li>
+                        <li><strong>Atomicity:</strong> UPDATE stock SET remaining = remaining - 1 WHERE remaining >= 1 either succeeds (reservation granted) or fails (sold out).</li>
+                        <li><strong>Per-user limit:</strong> Query sum(quantity) for user+drop, check against max (2 units) before acquiring stock lock.</li>
+                        <li><strong>Versioning:</strong> @Version fields for optimistic locking in JPA (fallback if needed).</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showTab(evt, tabName) {
+            const contents = document.querySelectorAll('.tab-content');
+            contents.forEach(c => c.classList.remove('active'));
+            document.getElementById(tabName).classList.add('active');
+
+            const buttons = document.querySelectorAll('.tab-btn');
+            buttons.forEach(b => b.classList.remove('active'));
+            evt.currentTarget.classList.add('active');
+        }
+    </script>
+</body>
+</html>

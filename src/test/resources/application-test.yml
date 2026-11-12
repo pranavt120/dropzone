@@ -1,0 +1,33 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/flashsale
+    driver-class-name: org.postgresql.Driver
+    username: postgres
+    password: postgres
+    hikari:
+      maximum-pool-size: 200
+      minimum-idle: 10
+      connection-timeout: 60000
+
+  flyway:
+    enabled: false
+
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: false
+    properties:
+      hibernate:
+        connection:
+          isolation: REPEATABLE_READ
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+
+  task:
+    scheduling:
+      enabled: false
+
+logging:
+  level:
+    root: WARN
+    com.flashsale: DEBUG

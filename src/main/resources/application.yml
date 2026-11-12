@@ -1,0 +1,35 @@
+spring:
+  application:
+    name: flash-sale-reservation-service
+
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    show-sql: false
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        format_sql: true
+        connection:
+          isolation: REPEATABLE_READ
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/flashsale
+    username: postgres
+    password: postgres
+    hikari:
+      maximum-pool-size: 100
+      minimum-idle: 5
+      connection-timeout: 3000
+
+  threads:
+    virtual:
+      enabled: true
+
+server:
+  port: 8080
+
+logging:
+  level:
+    root: INFO
+    com.flashsale: DEBUG

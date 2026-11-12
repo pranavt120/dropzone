@@ -1,0 +1,26 @@
+# Maven
+target/
+*.jar
+*.war
+pom.xml.tag
+pom.xml.releaseBackup
+release.properties
+
+# IDE
+.idea/
+.vscode/
+*.iml
+*.iws
+*.ipr
+.DS_Store
+
+# Java
+*.class
+*.log
+
+# Build
+build/
+out/
+
+# Documentation
+*.md
